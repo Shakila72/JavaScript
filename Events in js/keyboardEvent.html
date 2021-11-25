@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Events </title>
+    <style>
+        .main-div
+        {
+            display: grid;
+            place-items: center;
+            margin-top: 200px;
+        }
+
+        body{
+            background-color: rgb(6, 91, 94);
+        }
+        p{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        input
+        {
+            margin-left: 200px;
+            border: 5px solid cornflowerblue;
+            width: 200px;
+            height: 50px;
+            font: 20px/24px "Lato" , Arial, sans-serif;
+        }
+        /* #keys
+        {
+            color: darkorange;
+        }
+
+        input [type="text"]
+        {
+            font: 15px/24px "Lato" , Arial, sans-serif;
+             color: darkturquoise;
+              width: 100px;
+              height: 50px;
+
+        }
+
+        .effect-1
+        {
+            border: 0px;
+            padding: 7px;
+            border-bottom: 1px solid blueviolet;
+        } */
+
+        /* .effect-1 ~ .focus-border
+        {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: darkgray;
+
+        } */
+/*
+        .effect-1:focus ~ .focus-border
+        {
+            width: 100%;
+            transition: 0.4s;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>A function is triggered when a user is pressing a key in the input field</p>
+            <br>
+            <input type="text" class="effect-1" onkeypress= "keyPress()" onkeydown="keyDown()" onkeyup="keyUp()" name="" id="">
+            <br>
+            <p id="keys"></p>
+        </div>
+    </div>
+
+    <script>
+        //  const keyPress = () =>
+        // {
+        //     document.getElementById('keys').innerHTML=`you press ${event.key} and its code is ${event.code}`;
+        // }
+
+
+
+        //better to use 2nd and 3rd one
+
+        const keyDown=() =>
+        {
+            document.getElementById('keys').innerHTML=`key is Down`;
+            //when we click backslah to delete then it will run
+        }
+
+        const keyUp=() =>
+        {
+            document.getElementById('keys').innerHTML=`key is Up`;
+            //when we click backslah to delete then it will run
+        }
+
+    </script>
+
+</body>
+</html>

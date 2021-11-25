@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT OBJECT IN JAVASCRIPT</title>
+    <link rel="stylesheet" href="events-style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Let's see what is Event object?</h1>
+        <div class="button_container">
+
+        <div class="button_su">
+            <span class="su_button_circle">
+            </span>
+            <a href="#" class="button_su_inner" id="fourtway">
+                <span class="button_text_container">
+                    Event Listeners
+                </span>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+
+// to get all the information about the event, we can use the  event object
+
+      const fourtway=document.getElementById('fourtway');
+
+        const checkEvent=()=>
+        {
+            alert('we are learning event object');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+
+      fourtway.addEventListener('click', checkEvent);
+
+    </script>
+
+</body>
+</html>

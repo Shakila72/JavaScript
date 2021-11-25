@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementById and querrySelector </title>
+</head>
+<body>
+    <ul>
+        <li id="prog">c++</li>
+        <li>HTML</li>
+        <li class="web">CSS</li>
+        <li class="web">JavaScript</li>
+    </ul>
+
+    <script>
+        console.log(document.getElementById('prog').innerHTML);
+        console.log(document.querySelector('#prog').innerHTML);
+        console.log(document.querySelector('ul li.web').innerHTML);
+
+    </script>
+
+</body>
+</html>
+
+<!-- getElementById vs querySelector: Difference
+What if you want to get the HTML content of the third I i?
+You will not be able to use getElementById because
+there is no id associated with it. But you can so with querySelector. -->

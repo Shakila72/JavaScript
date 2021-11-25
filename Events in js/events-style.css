@@ -1,0 +1,84 @@
+body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(211, 148, 66);
+        }
+        h1{
+            text-align: center;
+            color: crimson;
+        }
+        .credit
+        {
+            text-align: center;
+            color: darkcyan;
+
+        }
+        .content
+        {
+            padding-top: 45px;
+            padding-bottom: 20px;
+
+        }
+        .button_container
+        {
+            width: 176px;
+            margin: auto;
+            margin-top: 30px;
+            padding-top: 40px;
+
+        }
+        .button_su
+        {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgb(56, 52, 52);
+        }
+        .su_button_circle
+        {
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-top: 0px;
+            margin-left: 0px;
+            pointer-events: none;
+            /* animation-timing-function: ease-in-out; */
+
+        }
+        .button_su_inner
+
+        {
+            display: inline-block;
+            background-color: darksalmon;
+            color: darkslategrey;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: 400ms;
+            padding: 22px;
+            z-index: 100000;
+        }
+        .button_text_container
+        {
+            position: relative;
+            z-index: 10000;
+        }
+
+        .explode_circle
+        {
+            animation: explode 0.5s forwards;
+        }
+        .desplode_circle
+        {
+            animation: desplode 0.5s forwards;
+        }
+

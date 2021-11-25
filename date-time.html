@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>click the button to display date </p>
+    <button onclick="myfunction()">Try it</button>
+    <p id="demo"></p>
+    <p id="time"></p>
+    <p id="date"></p>
+    <p id="time-d"></p>
+
+    <script>
+        // function myfunction()
+        // {
+        //     t.setHours(5);
+        //     document.getElementById("demo").innerHTML=t; //DOM(document object model) method
+        // }     var t=new Date();
+
+    // var t=new Date().toLocaleTimeString();
+    // document.getElementById("time").innerHTML=t;
+
+    var d=new Date().toLocaleDateString();
+    document.getElementById("date").innerHTML=d;
+    // date and time
+    // var t_d=new Date().toLocaleString();
+    // document.getElementById("time-d").innerHTML=t_d;
+
+
+        (function()
+        {
+            setInterval(()=>{
+                //console.log(new Date().toLocaleTimeString());
+                var t=new Date().toLocaleTimeString()
+                document.getElementById("demo").innerHTML=t;
+            },1000)
+        })();
+    </script>
+</body>
+</html>

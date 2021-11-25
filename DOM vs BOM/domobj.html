@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM onclick event</title>
+    <style>
+
+        body
+        {
+            background-color: rgb(72, 72, 194);
+            color: white;
+            font-family: monospace;
+            font-size: 20px;
+            align-items: center;
+        }
+        button
+        {
+            font-family: monospace;
+            font-size: 20px;
+            color: white;
+            /* box-shadow: black; */
+            background-color: tomato;
+          border: 2px solid rgb(223, 146, 4) ;
+          border-radius: 5px;
+          width: 100px;
+          height: 50px;
+          margin-left: 500px;
+          margin-top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="button_su" onclick="goback()">Go Back</button>
+    <p>Notice that clicking on the back button will redirect you to the previous URL in the history list</p>
+
+    <script>
+        function goback()
+        {
+
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS TYPES IN JAVASCRIPT</title>
+
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background: rgb(211, 148, 66);
+        }
+        h1{
+            text-align: center;
+            color: crimson;
+        }
+        .credit
+        {
+            text-align: center;
+            color: darkcyan;
+
+        }
+        .content
+        {
+            padding-top: 45px;
+            padding-bottom: 20px;
+
+        }
+        .button_container
+        {
+            width: 176px;
+            margin: auto;
+            margin-top: 30px;
+            padding-top: 40px;
+
+        }
+        .button_su
+        {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgb(56, 52, 52);
+        }
+        .su_button_circle
+        {
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-top: 0px;
+            margin-left: 0px;
+            pointer-events: none;
+            /* animation-timing-function: ease-in-out; */
+
+        }
+        .button_su_inner
+
+        {
+            display: inline-block;
+            background-color: darksalmon;
+            color: darkslategrey;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: 400ms;
+            padding: 22px;
+            z-index: 100000;
+        }
+        .button_text_container
+        {
+            position: relative;
+            z-index: 10000;
+        }
+
+        .explode_circle
+        {
+            animation: explode 0.5s forwards;
+        }
+        .desplode_circle
+        {
+            animation: desplode 0.5s forwards;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <h1>Different Event types in JavaScript</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="button_su_circle">
+                </span>
+                <a href="#" class="button_su_inner" onclick="alert('I am working with JavaScript')">
+                    <span class="button_text_container">
+                         simple Inline alert()
+                           <!--first way of writing function-->
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                    <span class="button_text_container">
+                    By Calling Function
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" id="thirdway">
+                    <span class="button_text_container">
+                        Inline_event
+                    </span>
+                </a>
+            </div>
+
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" id="fourtway">
+                    <span class="button_text_container">
+                        Event Listeners
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+
+        //2nd way of writing function
+        const callingFunction=()=>
+        {
+            alert('most common way of calling function');
+        }
+
+
+        // 3rd way of writing function
+        const thirdway=document.getElementById('thirdway');
+        thirdway.onclick=function()
+        {
+            alert('most common way of calling function using anonymous function(function having no name)');
+        }
+
+        thirdway.onclick=function()
+        {
+            console.log(('most common way of calling function using anonymous function(function having no name)'));
+        }//it work like css top to bottom it runs the most bottom event function like in this case console.log works only upper alert is override by console.log
+
+        //onclick override previous method
+
+        // 4th way of writing function
+        const fourtway=document.querySelector('#fourtway');
+        fourtway.addEventListener('click' ,()=>//we can use multiple time click
+        {
+
+            alert('using EventListener,callback(fat arrow function) and querryselector ');
+
+        })
+
+
+        fourtway.addEventListener('click' ,()=>//we can use multiple time click
+        {
+
+            console.log(('using EventListener,callback(fat arrow function) and querryselector '));
+
+        })//we can call multiple times
+
+
+    </script>
+
+</body>
+</html>
+
+

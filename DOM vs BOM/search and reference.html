@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and check reference of elements</title>
+    <style>
+        body
+        {
+            font-size: 30px;
+            font-family: monospace;
+            display: grid;
+            place-items: center;
+            background-color: burlywood;
+        }
+        button{
+            display: inline-block;
+            background-color: cadetblue;
+            color: darkgreen;
+            font-size: 30px;
+            font-weight: normal;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 100000;
+            cursor: pointer;
+        }
+        p
+        {
+            text-align: center;
+            color: coral;
+
+        }
+        h1
+        {
+
+            color: aquamarine;
+
+        }
+    </style>
+</head>
+<body>
+
+    <p class="p">Learning search and reference of element</p>
+    <p class="p">learnt DOM</p>
+    <p>Practice DOM and BOM</p>
+    <h1 id="heading">change the conrent of h1</h1>
+
+    <form action="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">malefemale</label>
+        <input type="radio" name="gender" id="">
+
+
+    </form>
+
+    <button onclick="ChangeContent()">Click me</button>
+
+    <script>
+       const ChangeContent=()=>
+        {
+            //this is refernce of element
+            //we can directly write
+
+            //document.getElementById('heading').innerHTML="welcome to"
+
+            // by taking the referenece, heading h1 is the object here
+
+            //const changecontent=document.getElementById('heading');
+            //changecontent.innerHTML="welcome to"
+            //dealing with classes
+
+           // console.log(document.getElementsByClassName('p'));
+
+           //console.log(document.getElementsByTagName('p'));
+           //console.log(document.getElementsByName('gender'));
+
+           //Now the same we have is the query selectors
+            // querySelector returns the first matching value whereas
+            // querySelectorAll() will return all the elements
+
+            document.querySelector('#heading').innerHTML="using querry selector";
+
+            //document.querySelector('.p').innerHTML="using class in querry"
+
+
+
+
+            //Now the same we have is the query selectors
+            //querySelector returns the first matching value whereas
+            //querySelectorAll() will return all the elements
+
+            console.log(document.querySelectorAll('.p'));
+
+
+            console.log(document.querySelectorAll('#heading'));
+        }
+    </script>
+
+</body>
+</html>
